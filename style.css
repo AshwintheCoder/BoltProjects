@@ -1,0 +1,82 @@
+body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000;
+      font-family: sans-serif;
+      color: #fff;
+    }
+
+    .instructions {
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+
+    .game-container {
+      position: relative;
+    }
+
+    .ui {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      gap: 20px;
+      font-size: 1.2em;
+    }
+
+    .level {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1.2em;
+    }
+
+    canvas {
+      border: 2px solid #fff;
+    }
+
+    .game-over,
+    .pause-menu,
+    .level-complete {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border: 2px solid #fff;
+      text-align: center;
+    }
+
+    .game-over h1,
+    .pause-menu h1,
+    .level-complete h1 {
+      margin-bottom: 20px;
+    }
+
+    .game-over button,
+    .pause-menu button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+
+    .shop {
+      margin-bottom: 20px;
+    }
+
+    .shop h2 {
+      margin-bottom: 10px;
+    }
+
+    .hidden {
+      display: none;
+    }
