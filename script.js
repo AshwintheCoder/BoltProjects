@@ -2,7 +2,7 @@ const canvas = document.getElementById('gameCanvas');
     const ctx = canvas.getContext('2d');
     const scoreDisplay = document.getElementById('scoreValue');
     const livesDisplay = document.getElementById('livesValue');
-    const levelDisplay = document.querySelector('.level span');
+    const levelDisplay = document.getElementById('levelValue');
     const gameOverScreen = document.getElementById('gameOver');
     const restartButton = document.getElementById('restartButton');
     const pauseMenu = document.getElementById('pauseMenu');
@@ -65,14 +65,14 @@ const canvas = document.getElementById('gameCanvas');
         invaderSpeed = 1;
         invaderScore = 10;
       } else if (level === 2) {
-        invaderRows = 5;
-        invaderCols = 11;
-        invaderSpeed = 1.3;
+        invaderRows = 3;
+        invaderCols = 8;
+        invaderSpeed = 0.8;
         invaderScore = 20;
       } else if (level === 3) {
         invaderRows = 6;
-        invaderCols = 12;
-        invaderSpeed = 1.6;
+        invaderCols = 14;
+        invaderSpeed = 2;
         invaderScore = 30;
       }
       createInvaders();
@@ -166,18 +166,17 @@ const canvas = document.getElementById('gameCanvas');
       }
 
       for (let i = 0; i < invaders.length; i++) {
-          const invader = invaders[i];
-          if (invader.alive && invader.y + invader.height >= canvas.height) {
-              lives--;
-              livesDisplay.textContent = lives;
-              if (lives <= 0) {
-                  gameRunning = false;
-                  gameOverScreen.classList.remove('hidden');
-              } else {
-                  setupLevel();
-              }
-              break;
+        const invader = invaders[i];
+        if (invader.alive &&
+            invader.y + invader.height >= player.y) {
+          lives--;
+          livesDisplay.textContent = lives;
+          if (lives <= 0) {
+            gameRunning = false;
+            gameOverScreen.classList.remove('hidden');
           }
+          break;
+        }
       }
     }
 
