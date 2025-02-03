@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Space Invaders</title>
+        <link rel="stylesheet" href="style.css" />
+      </head>
+      <body>
+        <div class="instructions">Click L to pause and access shop!</div>
+        <div class="game-container">
+          <div class="ui">
+            <div class="score">Score: <span id="scoreValue">0</span></div>
+            <div class="lives">Lives: <span id="livesValue">3</span></div>
+          </div>
+          <div class="level">Level: <span id="levelValue">1</span></div>
+          <canvas id="gameCanvas" width="600" height="400"></canvas>
+          <div id="gameOver" class="game-over hidden">
+            <h1>Game Over</h1>
+            <button id="restartButton">Restart</button>
+          </div>
+          <div id="pauseMenu" class="pause-menu hidden">
+            <h1>Game Paused</h1>
+            <div class="shop">
+              <h2>Shop</h2>
+              <button id="upgradeSpeed">Upgrade Speed (50 points)</button>
+              <button id="upgradeBulletSpeed">Upgrade Bullet Speed (75 points)</button>
+              <button id="addLife">Add Life (100 points)</button>
+            </div>
+            <button id="resumeButton">Resume</button>
+          </div>
+          <div id="levelComplete" class="level-complete hidden">
+            <h1>Level Complete</h1>
+          </div>
+        </div>
+        <script src="script.js"></script>
+      </body>
+    </html>
